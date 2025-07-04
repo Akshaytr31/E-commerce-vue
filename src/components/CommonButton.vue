@@ -28,7 +28,7 @@ const handleEvent = () => {
 .common-button {
   border-radius: 30px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: unset;
   letter-spacing: unset;
 }
@@ -36,5 +36,10 @@ const handleEvent = () => {
 .primary {  
   background-color: #d1dff4;
   color: #0e0e0e;
+}
+
+.secondary {
+    background-color: #f0f1f5;
+    color: #0e0e0e;
 }
 </style>
