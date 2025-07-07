@@ -31,7 +31,7 @@ const copyRight = "©ShopeVue. all right reserved ";
 .footer {
   position: fixed;
   width: 100%;
-  bottom: 0;
+  bottom: 60;
 }
 
 .footer-elements {
