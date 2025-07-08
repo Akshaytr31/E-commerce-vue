@@ -108,7 +108,7 @@ import DropDown from "./DropDown.vue";
 
   .nav-container-elm1 span {
     height: 17px;
-    width: 6px;
+    width: 7px;
   }
 }
 </style>
