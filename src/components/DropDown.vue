@@ -6,7 +6,7 @@
           <v-icon class="icon">mdi-menu</v-icon>
         </div>
       </template>
-      <div style="width: 300px;">
+      <div style="width: 310px;">
         <v-list>
           <v-list-item v-for="(item, index) in items" :key="index" :value="index">
             <router-link :to="`${item.path}`" style="text-decoration: none;color: black;">
