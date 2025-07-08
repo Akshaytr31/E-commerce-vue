@@ -1,3 +1,4 @@
+
 <template>
   <v-card class="nav-card">
     <div class="nav-container">
@@ -11,9 +12,15 @@
       </div>
       <DropDown class="menu-icon" />
       <div class="nav-container-menu">
-        <span>Home</span>
-        <span>Product</span>
-        <CommonButton variant="secondary" text="cart" />
+        <router-link to="/" style="text-decoration: none; color: black">
+          <span>Home</span>
+        </router-link>
+        <router-link to="/products" style="text-decoration: none; color: black">
+          <span>Product</span>
+        </router-link>
+        <router-link to="/cart">
+          <CommonButton variant="secondary" text="cart" />
+        </router-link>
       </div>
     </div>
   </v-card>
@@ -61,6 +68,10 @@ import DropDown from "./DropDown.vue";
 
 .nav-container-menu {
   display: none;
+}
+
+.menu-icon {
+  display: block;
 }
 
 @media screen and (min-width: 700px) {
