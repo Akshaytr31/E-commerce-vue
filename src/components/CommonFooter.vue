@@ -2,15 +2,15 @@
   <div class="footer">
     <div class="footer-container">
       <div
-        v-for="footerContent in footerContent"
-        :key="footerContent.title"
+        v-for="content in footerContent"
+        :key="content.title"
         class="footer-elements"
       >
         <router-link
-          :to="footerContent.path"
+          :to="content.path"
           style="text-decoration: none; color: #808080"
         >
-          <div class="footer-element">{{ footerContent.title }}</div>
+          <div class="footer-element">{{ content.title }}</div>
         </router-link>
       </div>
     </div>
@@ -23,7 +23,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { copyRight, footerContent } from "@/constants/FooterContent";
+import { copyRight, footerContent } from "@/constants/Index";
 </script>
 <style lang="scss" scoped>
 .footer {
