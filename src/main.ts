@@ -15,9 +15,9 @@ const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
 
 const vuetify = createVuetify({
-    components,
-    directives,
-  })
+  components,
+  directives,
+})
 
 const app = createApp(App)
 
