@@ -31,13 +31,13 @@ const handleEvent = () => {
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.02);
 }
 
-.primary {  
+.primary {
   background-color: #d1dff4;
   color: #181818;
 }
 
 .secondary {
-    background-color: #f0f1f5;
-    color: #0e0e0e;
+  background-color: #f0f1f5;
+  color: #0e0e0e;
 }
 </style>

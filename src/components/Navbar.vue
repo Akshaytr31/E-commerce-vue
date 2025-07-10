@@ -1,13 +1,13 @@
 <template>
   <v-card class="nav-card">
     <div class="nav-container">
-      <div class="nav-container-elm">
-        <div class="nav-container-elm1">
+      <div class="nav-container-elements">
+        <div class="nav-container-logo">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <span class="nav-container-elm2">ShopVue</span>
+        <span class="nav-container-heading">ShopVue</span>
       </div>
       <DropDown class="menu-icon" />
       <div class="nav-container-menu">
@@ -30,7 +30,9 @@ import DropDown from "./DropDown.vue";
 </script>
 <style lang="scss" scoped>
 .nav-card {
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.02);
+  position: fixed;
+  width: 100%;
+  box-shadow: 2px 4px 6px #00000005;
 }
 
 .nav-container {
@@ -42,25 +44,25 @@ import DropDown from "./DropDown.vue";
   margin: 0 auto;
 }
 
-.nav-container-elm {
+.nav-container-elements {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.nav-container-elm1 {
+.nav-container-logo {
   display: flex;
   gap: 1px;
 }
 
-.nav-container-elm1 span {
+.nav-container-logo span {
   height: 13px;
   width: 4px;
   border-radius: 50%;
-  background-color: black;
+  background-color: #000000;
 }
 
-.nav-container-elm2 {
+.nav-container-heading {
   font-size: 16px;
   font-weight: 700;
 }
@@ -86,12 +88,12 @@ import DropDown from "./DropDown.vue";
     font-weight: 500;
   }
 
-  .nav-container-elm1 span {
+  .nav-container-logo span {
     height: 15px;
     width: 5px;
   }
 
-  .nav-container-elm2 {
+  .nav-container-heading {
     font-size: 20px;
   }
 }
@@ -101,13 +103,13 @@ import DropDown from "./DropDown.vue";
     gap: 40px;
   }
 
-  .nav-container-elm2 {
+  .nav-container-heading {
     font-size: 22px;
   }
 
   .nav-container-elm1 span {
     height: 17px;
-    width: 6px;
+    width: 7px;
   }
 }
 </style>
