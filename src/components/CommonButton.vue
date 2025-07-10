@@ -7,14 +7,13 @@
   </div>
 </template>
 <script setup lang="ts">
-defineProps({
-  text: String,
-  variant: {
-    type: String,
-    default: "primary",
-  },
-  icon: String,
-});
+withDefaults(defineProps<{
+  text: string
+  variant?: string
+  icon?: string
+}>(), {
+  variant: 'primary'
+})
 
 const emit = defineEmits(["onClick"]);
 
