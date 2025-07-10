@@ -1,7 +1,8 @@
-import type FooterElement from '@/types/FooterElement';
+import type FooterContentType from '@/types/FooterContentType';
 
+export const copyRight = "©ShopeVue. all right reserved ";
 
-export const footerContent = <FooterElement[]>[
+export const footerContent = <FooterContentType[]>[
     { title: "About", path: "/about" },
     { title: "Contact", path: "/contact" },
     {

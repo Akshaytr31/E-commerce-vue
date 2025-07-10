@@ -23,15 +23,13 @@
   </div>
 </template>
 <script setup lang="ts">
-import { footerContent } from "@/constants/FooterContent";
-
-const copyRight = "©ShopeVue. all right reserved ";
+import { copyRight, footerContent } from "@/constants/FooterContent";
 </script>
 <style lang="scss" scoped>
 .footer {
   position: fixed;
   width: 100%;
-  bottom: 60;
+  bottom: 20px;
 }
 
 .footer-elements {
@@ -61,5 +59,11 @@ const copyRight = "©ShopeVue. all right reserved ";
   display: flex;
   justify-content: center;
   color: #808080;
+}
+
+@media screen and (max-width: 400px) {
+  .footer-container {
+    gap: 0;
+  }
 }
 </style>
