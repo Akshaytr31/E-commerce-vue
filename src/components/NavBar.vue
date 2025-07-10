@@ -32,7 +32,7 @@ import DropDown from "./DropDown.vue";
 .nav-card {
   position: fixed;
   width: 100%;
-  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.02);
+  box-shadow: 2px 4px 6px #00000005;
 }
 
 .nav-container {
@@ -59,7 +59,7 @@ import DropDown from "./DropDown.vue";
   height: 13px;
   width: 4px;
   border-radius: 50%;
-  background-color: black;
+  background-color: #000000;
 }
 
 .nav-container-heading {

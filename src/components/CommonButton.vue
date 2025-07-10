@@ -33,7 +33,7 @@ const handleEvent = () => {
 
 .primary {  
   background-color: #d1dff4;
-  color: #0e0e0e;
+  color: #181818;
 }
 
 .secondary {
