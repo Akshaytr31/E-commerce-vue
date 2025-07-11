@@ -7,13 +7,16 @@
   </div>
 </template>
 <script setup lang="ts">
-withDefaults(defineProps<{
-  text: string
-  variant?: string
-  icon?: string
-}>(), {
-  variant: 'primary'
-})
+withDefaults(
+  defineProps<{
+    text: string;
+    variant?: string;
+    icon?: string;
+  }>(),
+  {
+    variant: "primary",
+  }
+);
 
 const emit = defineEmits(["onClick"]);
 
@@ -39,5 +42,12 @@ const handleEvent = () => {
 .secondary {
   background-color: #f0f1f5;
   color: #0e0e0e;
+}
+
+.counter {
+  background-color: #f0f1f5;
+  color: #0e0e0e;
+  border-radius: 5px;
+  height: 20px;
 }
 </style>
