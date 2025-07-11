@@ -3,7 +3,7 @@
     <div class="nav-container">
       <div class="nav-container-elements">
         <div class="nav-container-logo">
-          <img :src="logo" />
+          <img src="/src/assets/img/image.png" alt="logo"/>
         </div>
       </div>
       <DropDown class="menu-icon" />
@@ -24,7 +24,6 @@
 <script setup lang="ts">
 import CommonButton from "./CommonButton.vue";
 import DropDown from "./DropDown.vue";
-import { logo } from "@/constants";
 </script>
 <style lang="scss" scoped>
 .nav-card {
