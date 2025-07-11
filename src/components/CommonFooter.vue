@@ -23,7 +23,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { copyRight, footerContent } from "@/constants/Index";
+import { copyRight, footerContent } from "@/constants";
 </script>
 <style lang="scss" scoped>
 .footer {

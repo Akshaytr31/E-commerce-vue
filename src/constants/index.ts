@@ -1,6 +1,12 @@
-import type FooterContentType from '@/types/Index';
+import type FooterContentType from '@/types';
 
 export const copyRight = "©ShopeVue. all right reserved ";
+
+export const cart='Your Cart'
+
+export const cartTable=['Product','Name','Quality','Price','Action']
+
+export const logo='/src/assets/img/image.png'
 
 export const footerContent :FooterContentType[] =[
     { title: "About", path: "/about" },
