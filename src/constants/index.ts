@@ -6,8 +6,6 @@ export const cart='Your Cart'
 
 export const cartTable=['Product','Name','Quality','Price','Action']
 
-export const logo='/src/assets/img/image.png'
-
 export const footerContent :FooterContentType[] =[
     { title: "About", path: "/about" },
     { title: "Contact", path: "/contact" },
