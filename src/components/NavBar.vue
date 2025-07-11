@@ -1,14 +1,10 @@
-
 <template>
   <v-card class="nav-card">
     <div class="nav-container">
-      <div class="nav-container-elm">
-        <div class="nav-container-elm1">
-          <span></span>
-          <span></span>
-          <span></span>
+      <div class="nav-container-elements">
+        <div class="nav-container-logo">
+          <img :src="logo" alt="logo" />
         </div>
-        <span class="nav-container-elm2">ShopVue</span>
       </div>
       <DropDown class="menu-icon" />
       <div class="nav-container-menu">
@@ -26,11 +22,15 @@
   </v-card>
 </template>
 <script setup lang="ts">
+import logo from "./src/assets/img/image.png"
 import CommonButton from "./CommonButton.vue";
 import DropDown from "./DropDown.vue";
+
 </script>
 <style lang="scss" scoped>
 .nav-card {
+  position: fixed;
+  width: 100%;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.02);
 }
 
@@ -43,27 +43,14 @@ import DropDown from "./DropDown.vue";
   margin: 0 auto;
 }
 
-.nav-container-elm {
+.nav-container-elements {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.nav-container-elm1 {
-  display: flex;
-  gap: 1px;
-}
-
-.nav-container-elm1 span {
-  height: 13px;
-  width: 4px;
-  border-radius: 50%;
-  background-color: black;
-}
-
-.nav-container-elm2 {
-  font-size: 16px;
-  font-weight: 700;
+.nav-container-logo img {
+  height: 50px;
 }
 
 .nav-container-menu {
@@ -86,29 +73,11 @@ import DropDown from "./DropDown.vue";
     font-size: 14px;
     font-weight: 500;
   }
-
-  .nav-container-elm1 span {
-    height: 15px;
-    width: 5px;
-  }
-
-  .nav-container-elm2 {
-    font-size: 20px;
-  }
 }
 
 @media screen and (min-width: 900px) {
   .nav-container-menu {
     gap: 40px;
-  }
-
-  .nav-container-elm2 {
-    font-size: 22px;
-  }
-
-  .nav-container-elm1 span {
-    height: 17px;
-    width: 6px;
   }
 }
 </style>
