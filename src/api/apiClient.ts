@@ -1,13 +1,5 @@
-import axios from "axios";
-
-const api = axios.create({
-    baseURL: 'https://fakestoreapi.com'
-})
-
-const API_URLS = {
-    getProduductList: () => ('/products'),
-    getProductByID: (id: number) => (`/products/${id}`)
-}
+import { api } from "./products/api";
+import { API_URLS } from "./endpoints";
 
 export const getAllProducts = async () => {
     try {
@@ -26,4 +18,3 @@ export const getProductById = async (id: number) => {
         console.error("Failed to fetch users:", err);
     }
 }
-

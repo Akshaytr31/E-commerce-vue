@@ -1,5 +1,3 @@
-import type Rating from "./Rating";
-
 export default interface Product {
     title: string;
     id: number;
@@ -8,4 +6,10 @@ export default interface Product {
     price: number;
     image: string;
     rating: Rating;
-}
+  }
+  
+  interface Rating {
+    rate: number;
+    count: number
+  }
+  
