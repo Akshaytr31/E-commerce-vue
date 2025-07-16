@@ -36,8 +36,6 @@ const search=ref<Search>({
   title:""
 })
 
-const titles=items.map((item:Product)=>item.title)
-
 const filteredItems=computed(()=>{
   return items.filter((item:Product)=>
   item.title.toLowerCase().includes(search.value.title.toLowerCase())
