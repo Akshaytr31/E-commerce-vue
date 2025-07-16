@@ -66,7 +66,7 @@ const id = route.params.id as string;
 
 const product: Products | undefined = await getProductById(parseInt(id));
 </script>
-<style lang="scss" scoped>
+<style scoped>
 .main-container {
   display: flex;
   justify-content: center;
