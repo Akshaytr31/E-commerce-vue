@@ -57,13 +57,13 @@ const addToCart = () => {
 };
 
 const setCount = (count: number) => {
-  console.log("setcount", count);
   countValue.value = count;
 };
 
 const route = useRoute();
 const heading = route.name;
 const id = route.params.id as string;
+
 const product: Products | undefined = await getProductById(parseInt(id));
 </script>
 <style lang="scss" scoped>
