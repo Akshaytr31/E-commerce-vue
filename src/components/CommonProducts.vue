@@ -1,7 +1,9 @@
 <template>
-  <div style="height: 80px"></div>
+  <div></div>
+  <CommonSerchBar v-model="search"/>
+  <h1>{{ heading }}</h1>
   <div class="product-container">
-    <div v-for="item in items" :key="item.id" class="product-wrapper">
+    <div v-for="item in filteredItems" :key="item.id" class="product-wrapper">
       <router-link :to="`/products/${item.id}`">
         <div class="product-image">
           <img :src="item.image" alt="product" />
@@ -21,9 +23,26 @@
   </div>
 </template>
 <script setup lang="ts">
-import { getAllProducts } from "@/service/Products";
+import { computed,ref } from "vue";
+import { getAllProducts } from "@/api/apiClient";
+import type Product from "@/types/Products";
+import type Search from "@/types/Search";
+import CommonSerchBar from "./CommonSerchBar.vue";
 
+const heading='All products'
 const items = await getAllProducts();
+
+const search=ref<Search>({
+  title:""
+})
+
+const titles=items.map((item:Product)=>item.title)
+
+const filteredItems=computed(()=>{
+  return items.filter((item:Product)=>
+  item.title.toLowerCase().includes(search.value.title.toLowerCase())
+)
+})
 </script>
 <style lang="scss" scoped>
 .product-container {
@@ -97,6 +116,13 @@ a {
 
 .procuct-count {
   font-size: 13px;
+}
+
+h1{
+  padding-inline: 30px;
+  max-width: 1260px;
+  margin: 20px auto 10px;
+  color: rgb(44, 44, 44);
 }
 
 @media screen and (min-width: 680px) {
