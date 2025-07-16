@@ -1,10 +1,10 @@
 <template>
-  <div style="height: 80px"></div>
+  <div style="height: 83px"></div>
   <div class="main-container">
     <div class="card-container">
       <div class="card-overlay">
-        <h1>{{ content.title }}</h1>
-        <p>{{ content.discription }}</p>
+        <h1>{{ homeContent.title }}</h1>
+        <p>{{ homeContent.discription }}</p>
         <router-link to="/products">
           <CommonButton variant="primary" text="shop now" />
         </router-link>
@@ -13,13 +13,8 @@
   </div>
 </template>
 <script setup lang="ts">
+import { homeContent } from "@/constants";
 import CommonButton from "./CommonButton.vue";
-
-const content = {
-  title: "Eleva Your Lifestyle",
-  discription:
-    "Discover curated collections for every aspect of your life, from fashion to home essentials",
-};
 </script>
 <style lang="scss" scoped>
 .card-container {
