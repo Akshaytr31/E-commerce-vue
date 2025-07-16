@@ -1,7 +1,7 @@
 <template>
   <div class="main-container">
     <div class="product-heading">
-      <router-link to="/products">
+      <router-link to="/products" class="products-page">
         <div>{{ heading }}</div>
       </router-link>
       <div>/{{ product?.title }}</div>
@@ -36,7 +36,6 @@ import CommonButton from "./CommonButton.vue";
 import CommonCounter from "./CommonCounter.vue";
 
 const countValue = ref();
-
 const appStore = useEcommerceStore();
 
 const cartItems = ref<cart>({
@@ -63,11 +62,8 @@ const setCount = (count: number) => {
 };
 
 const route = useRoute();
-
 const heading = route.name;
-
 const id = route.params.id as string;
-
 const product: Products | undefined = await getProductById(parseInt(id));
 </script>
 <style lang="scss" scoped>
@@ -124,13 +120,9 @@ const product: Products | undefined = await getProductById(parseInt(id));
   justify-content: space-between;
 }
 
-a {
+.products-page {
   text-decoration: none;
   color: rgb(2, 2, 155);
-}
-
-a:hover {
-  text-decoration: solid;
 }
 
 @media screen and (max-width: 900px) {
