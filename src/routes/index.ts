@@ -4,6 +4,7 @@ import EcommerceHomePage from "@/pages/EcommerceHomePage.vue";
 import EcommerceProductPage from "@/pages/EcommerceProductPage.vue";
 import EcommerceCartPage from "@/pages/EcommerceCartPage.vue";
 import About from "@/components/About.vue";
+import EcommerceItemPage from "@/pages/EcommerceItemPage.vue";
 const routes: RouteRecordRaw[]=[
     {
         path:'/',
@@ -11,9 +12,14 @@ const routes: RouteRecordRaw[]=[
         component:EcommerceHomePage
     },
     {
-        path:'/product/:id',
+        path:'/products',
         name:'product',
         component:EcommerceProductPage
+    },
+    {
+        path:'/products/:id',
+        name:'products',
+        component:EcommerceItemPage
     },
     {
         path:'/cart',

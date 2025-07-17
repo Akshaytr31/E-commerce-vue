@@ -18,16 +18,9 @@ const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
 
 const vuetify = createVuetify({
-    components,
-    directives,
-  })
+  components,
+  directives,
+})
 
-const app = createApp(App)
+createApp(App).use(pinia).use(router).use(vuetify).mount('#app');
 
-app.use(createPinia())
-
-app.use(vuetify)
-
-app.use(router)
-
-app.mount('#app')
